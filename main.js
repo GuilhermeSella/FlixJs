@@ -38,8 +38,15 @@ loadMovies = (res) =>{
                     }</p>
                 </div>
             </div>
-            <a class="button" id="${movie.id}" href="movieInfo/index.html">Acessar</a>
+            <a class="button" onclick="getId(${movie.id})" target="blank" href="movieInfo/index.html">Acessar</a>
         `
         main.appendChild(div)
+        const idMovie = movie.id
     })
 }
+
+
+
+    
+
+

@@ -73,7 +73,7 @@ header{
 .movieCard .img{
     
     height: 400px;
-    width: 90%;
+   max-width: 270px;
 }
 .movieCard .imgMovie{
     width: 100%;
