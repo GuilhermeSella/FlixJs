@@ -1,9 +1,14 @@
 const url = `https://api.themoviedb.org/3/trending/all/week?api_key=8e27761e61ffeef6c32b397bf03f8b8d`
 
-async function loadMovies(){
+async function fetchMovies(){
     const response = await fetch(url)
-    const data = await response.json()
-    const res = data.results
+    .then((res) => res.json())
+    .then((data) => loadMovies(data.results))
+
+}
+fetchMovies();
+
+loadMovies = (res) =>{
     console.log(res)
     res.map( movie =>{
         const div = document.createElement('div')
@@ -15,6 +20,8 @@ async function loadMovies(){
         }else{
             nameMovie = movie.name
         }
+        let nota = movie.vote_average;
+        nota = nota.toFixed(1)
 
         div.innerHTML =`
             <div class="img">
@@ -23,11 +30,11 @@ async function loadMovies(){
                 <h3>${nameMovie}</h3>
             <div class="infoMovie">
                 <div>
-                    <p>2022</p>
+                    <p>${movie.release_date}</p>
                 </div>
                 <div class="nota">
                     <img src="icon/star.png" alt="">
-                    <p>${movie.vote_average
+                    <p>${nota
                     }</p>
                 </div>
             </div>
@@ -35,6 +42,4 @@ async function loadMovies(){
         `
         main.appendChild(div)
     })
-    
 }
-loadMovies();
