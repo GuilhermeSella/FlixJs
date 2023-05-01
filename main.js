@@ -38,7 +38,7 @@ loadMovies = (res) =>{
                     }</p>
                 </div>
             </div>
-            <a class="button" href="#">Acessar</a>
+            <a class="button" id="${movie.id}" href="movieInfo/index.html">Acessar</a>
         `
         main.appendChild(div)
     })
