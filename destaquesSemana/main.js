@@ -8,7 +8,7 @@ async function fetchMovies(){
 }
 fetchMovies();
 
-loadMovies = (res) =>{
+loadMovies = async (res) =>{
     console.log(res)
     res.map( movie =>{
         const div = document.createElement('div')
@@ -23,6 +23,15 @@ loadMovies = (res) =>{
         let nota = movie.vote_average;
         nota = nota.toFixed(1)
 
+        let dateMovie;
+
+        if(movie.release_date){
+            dateMovie = movie.release_date
+           
+        } else{
+          dateMovie = movie.first_air_date
+        }
+
         div.innerHTML =`
             <div class="img">
                 <img class="imgMovie" src =" https://image.tmdb.org/t/p/original/${movie.poster_path}" />     
@@ -30,7 +39,7 @@ loadMovies = (res) =>{
                 <h3>${nameMovie}</h3>
             <div class="infoMovie">
                 <div>
-                    <p>${movie.release_date}</p>
+                    <p>${dateMovie}</p>
                 </div>
                 <div class="nota">
                     <img src="icon/star.png" alt="">
@@ -38,10 +47,10 @@ loadMovies = (res) =>{
                     }</p>
                 </div>
             </div>
-            <a class="button" onclick="getId(${movie.id})" target="blank" href="movieInfo/index.html">Acessar</a>
+            <a class="button" id=${movie.id} target="blank" href="movieInfo/index.html">Acessar</a>
         `
         main.appendChild(div)
-        const idMovie = movie.id
+
     })
 }
 
