@@ -8,7 +8,7 @@
 }
 
 header{
-    background-color: rgb(7, 48, 113);
+    background-color: #051b34;
     color: white;
     padding: 5px;
     text-align: center;
@@ -17,5 +17,5 @@ header{
     
 }
 header b{
-    color: rgb(255, 238, 0);
+    color: #DA1212;
 }
