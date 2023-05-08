@@ -33,21 +33,14 @@ loadMovies = async (res) =>{
         }
 
         div.innerHTML =`
-            <div class="img">
-                <img class="imgMovie" src =" https://image.tmdb.org/t/p/original/${movie.poster_path}" />     
+        <article class="card">
+        <img class="card_img" src="https://image.tmdb.org/t/p/original/${movie.poster_path}" alt="">
+        <div class="card_content">
+            <span class="card_title">${nameMovie}</span>
+                <span class="card_subtitle">Overview</span>
+                <p class="card_description">${movie.overview}</p>
             </div>
-                <h3>${nameMovie}</h3>
-            <div class="infoMovie">
-                <div>
-                    <p>${dateMovie}</p>
-                </div>
-                <div class="nota">
-                    <img src="icon/star.png" alt="">
-                    <p>${nota
-                    }</p>
-                </div>
-            </div>
-            <a class="button" id=${movie.id} target="blank" href="movieInfo/index.html">Acessar</a>
+        </article>
         `
         main.appendChild(div)
 

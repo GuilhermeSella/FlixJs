@@ -32,10 +32,11 @@ header b{
    
    color: white;
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr ;
    justify-items: center;
-   grid-gap: 50px;
+   grid-gap: 30px;
     padding-bottom: 100px;
+    padding: 50px;
 }
 .destaquesSemana h3{
     text-align: center;
@@ -44,81 +45,107 @@ header b{
     
 }
 
-.movieCard{
-   
-    min-height: 460px;
-    min-width:300px ;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-  
-   align-items: center;
- 
-
-}
-
-@media screen and (max-width:1440px) {
+@media screen and (max-width:1460px) {
     .destaquesSemana{
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width:1040px) {
-    .destaquesSemana{
-        grid-template-columns: 1fr 1fr  ;
-    }
-}
-@media screen and (max-width:860px) {
+
+@media screen and (max-width:1000px) {
     .destaquesSemana{
         grid-template-columns: 1fr;
     }
 }
 
-.movieCard .img{
+
+
+/*  CARDS    */
+
+
+
+.card {
+    position: relative;
+    width: 435px;
+    height: 650px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  
+  
+  .card_title {
+    font-weight: bold;
+  }
+
+  .card_img{    
+
     
-    height: 400px;
-   max-width: 270px;
-}
-.movieCard .imgMovie{
+    background-repeat: no-repeat;
+    object-fit: cover;
     width: 100%;
     height: 100%;
-   border-radius: 10px;
-   overflow: hidden;
-   background-position: center;
-   background-size: cover;
-
-}
-
-.movieCard h3{
+  }
+  
+  .card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+      /* edit the width to fit card */
+    width: 100%;
+    padding: 15px;
+    background: #f2f2f2;
+    border-top-right-radius: 10px;
+      /* edit here to change the height of the content box */
+    transform: translateY(140px);
+    transition: transform .5s;
+  }
+  
+  
+  
+  .card_title {
+    color: #131313;
+    line-height: 15px;
     font-size: 1.3em;
-}
 
-
-.infoMovie{
-    display: flex;
-    gap: 20px;
-    
-}
-.infoMovie p {
-    font-size: 1.2rem;
-}
-.infoMovie .nota{
-    display: flex;
-    gap: 3px;
-    flex-direction: row-reverse;
-    align-items: center;
-}
-
-.movieCard .button{
-    margin-top: 10px;
-    cursor: pointer;
-    padding: 10px 25px;
-    background: #DA1212;
-    transition: .5s ;
-    font-size: 2.1vh;
-    text-decoration: none;
-    color: white;
-}
-.movieCard .button:hover{
-   transform: translateY(-5px);
-}
+  }
+  
+  .card_subtitle {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+  }
+  
+  .card_description {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  
+  .card:hover .card_content {
+    transform: translateY(0);
+  }
+  
+  .card:hover .card_description {
+    opacity: 1;
+   
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
