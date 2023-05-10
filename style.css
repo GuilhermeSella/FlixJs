@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
-    margin: 0;
     padding: 0;
+    margin: 0%;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body{
     background-color: #051b34;
 }
-
 header{
     background-color: #051b34;
     color: white;
@@ -23,78 +21,151 @@ header{
 header b{
     color: #DA1212;
 }
-
-main{
-    margin-top: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 10vh;
-}
-
-
-.title-destaque{
-    position:relative ;
+.title{
+   text-align: center;
     color: white;
-    top: 40%;
+   font-size: 1.7vh;
+   padding: 50px;
+}
+
+.destaquesSemana{
    
-    transition: .5s;
-    text-shadow: black 0.1em 0.1em 0.2em;
+   color: white;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr ;
+   justify-items: center;
+   grid-gap: 30px;
+    padding-bottom: 100px;
+    padding: 50px;
+}
+.destaquesSemana h3{
     text-align: center;
+    padding: 10px;
+    
+    
 }
 
-.destaque-semana{
-    cursor: pointer;
-    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/8HfjrSxfTVKmjNh8cJjbu5eXzcX.jpg');
-    height: 60vh;
-    width: 320px;
-    transition: .7s ;
-    
-    text-align: center;
-    
-    
-}
-.destaque-semana:hover{
-    width: 650px;
-}
-.destaque-semana:hover .title-destaque{
-    visibility: visible;
+@media screen and (max-width:1460px) {
+    .destaquesSemana{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.destaque-series{
-    cursor: pointer;
-    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg');
+
+@media screen and (max-width:1000px) {
+    .destaquesSemana{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*  CARDS    */
+
+
+
+.card {
+    position: relative;
+    width: 335px;
+    height: 100%;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  @media screen and (max-width:550px) {
+    .card{
+      width: 75vw;
+      min-width: 250px;
+    }
+    .destaquesSemana{
+      padding: 0%;
+    }
+  }
+  
+  
+  .card_title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .card_img{    
+
     
-    height: 60vh;
-    width: 320px;
-    transition: .25s linear;
-}
-.destaque-series:hover{
-    width: 650px;
-}
-.destaque-series:hover h1{
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+      /* edit the width to fit card */
+    width: 100%;
+    padding: 15px;
+    background: #f2f2f2;
+  
+    border-top-right-radius: 10px;
+      /* edit here to change the height of the content box */
+    transform: translateY(100%);
+    transition: transform .45s ease-in-out;
+  }
+  
+  
+  
+  
+  .card_subtitle {
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+    font-size: 16px;
+    margin-bottom: 10px;
+    
+    
+  }
+  .card_subtitle strong{
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .card_subtitle strong img{
+    width: 15px;
+    height: 15px;
+  }
+  
+  .card_description {
+    font-size: 16px;
+    opacity: 0;
+    padding-bottom: 7px;
+    transition: opacity .5s;
+  }
+  
+  .card:hover .card_content {
+    transform: translateY(0);
+  }
+  
+  .card:hover .card_description {
     opacity: 1;
-}
-
-.destaque-series:hover .title-destaque{
-    visibility: visible;
-    
-}
-
-
-
-@media screen and (max-width:850px) {
-    main{
-        flex-direction: column;
-    }
-
-    .destaque-semana{
-        width: 55vw;
-        min-width: 250px;
-    }
-    .destaque-series{
-        width: 55vw;
-        min-width: 250px;
-    }
-}
+   
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

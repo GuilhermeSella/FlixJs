@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #051b34;
+}
+
+header{
+    background-color: #051b34;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 1.8rem;
+    
+}
+header b{
+    color: #DA1212;
+}
+
+main{
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 10vh;
+}
+
+
+.title-destaque{
+    position:relative ;
+    color: white;
+    top: 40%;
+   
+    transition: .5s;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+}
+
+.destaque-semana{
+    cursor: pointer;
+    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/8HfjrSxfTVKmjNh8cJjbu5eXzcX.jpg');
+    height: 60vh;
+    width: 320px;
+    transition: .7s ;
+    
+    text-align: center;
+    
+    
+}
+.destaque-semana:hover{
+    width: 650px;
+}
+.destaque-semana:hover .title-destaque{
+    visibility: visible;
+}
+
+.destaque-series{
+    cursor: pointer;
+    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg');
+    
+    height: 60vh;
+    width: 320px;
+    transition: .25s linear;
+}
+.destaque-series:hover{
+    width: 650px;
+}
+.destaque-series:hover h1{
+    opacity: 1;
+}
+
+.destaque-series:hover .title-destaque{
+    visibility: visible;
+    
+}
+
+
+
+@media screen and (max-width:850px) {
+    main{
+        flex-direction: column;
+    }
+
+    .destaque-semana{
+        width: 75vw;
+        min-width: 250px;
+    }
+    .destaque-semana:hover{
+        width: 75vw;
+    }
+    .destaque-series{
+        width: 75vw;
+        min-width: 250px;
+    }
+    .destaque-series:hover{
+        width: 75vw;
+    }
+}
