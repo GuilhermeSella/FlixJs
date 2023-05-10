@@ -25,10 +25,12 @@ header b{
 }
 
 main{
+    margin-top: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-bottom: 10vh;
 }
 
 
@@ -36,18 +38,19 @@ main{
     position:relative ;
     color: white;
     top: 40%;
-    visibility: hidden;
+   
     transition: .5s;
+    text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
 }
 
 .destaque-semana{
     cursor: pointer;
-    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/44immBwzhDVyjn87b3x3l9mlhAD.jpg');
+    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/8HfjrSxfTVKmjNh8cJjbu5eXzcX.jpg');
     height: 60vh;
     width: 320px;
     transition: .7s ;
-    border: 2px solid black;
+    
     text-align: center;
     
     
@@ -61,18 +64,37 @@ main{
 
 .destaque-series{
     cursor: pointer;
-    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/bsNm9z2TJfe0WO3RedPGWQ8mG1X.jpg');
-    border: 2px solid black;
+    background: no-repeat center/cover url('https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg');
+    
     height: 60vh;
     width: 320px;
     transition: .25s linear;
 }
 .destaque-series:hover{
     width: 650px;
-    background-color: #da121221;
+}
+.destaque-series:hover h1{
+    opacity: 1;
 }
 
 .destaque-series:hover .title-destaque{
     visibility: visible;
     
+}
+
+
+
+@media screen and (max-width:850px) {
+    main{
+        flex-direction: column;
+    }
+
+    .destaque-semana{
+        width: 55vw;
+        min-width: 250px;
+    }
+    .destaque-series{
+        width: 55vw;
+        min-width: 250px;
+    }
 }

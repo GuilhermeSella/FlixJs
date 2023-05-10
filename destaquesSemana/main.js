@@ -39,8 +39,11 @@ loadMovies = async (res) =>{
         <img class="card_img" src="https://image.tmdb.org/t/p/original/${movie.poster_path}" alt="">
         <div class="card_content">
             <span class="card_title">${nameMovie}</span>
-                <span class="card_subtitle">Overview</span>
+                <span class="card_subtitle">Overview <strong>${nota} <img src="icon/star.png"></strong></span>
                 <p class="card_description">${movie.overview}</p>
+                <a class="link" target="blank" rel="external" href=https://youtube.com/results?search_query=${nameMovie} >
+                        Trailer
+                    </a>
             </div>
         </article>
         `
