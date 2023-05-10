@@ -1,4 +1,4 @@
-const url = `https://api.themoviedb.org/3/tv/top_rated?api_key=8e27761e61ffeef6c32b397bf03f8b8d`
+const url = `https://api.themoviedb.org/3/tv/top_rated?api_key=8e27761e61ffeef6c32b397bf03f8b8d&language=pt-br`
 
 async function fetchMovies(){
     const response = await fetch(url)
@@ -39,9 +39,7 @@ loadMovies = async (res) =>{
             <span class="card_title">${nameMovie}</span>
                 <span class="card_subtitle">Overview <strong>${nota} <img src="icon/star.png"></strong></span>
                 <p class="card_description">${movie.overview}</p>
-                <a class="link" target="blank" rel="external" href=https://youtube.com/results?search_query=${nameMovie} >
-                        Trailer
-                    </a>
+               
             </div>
         </article>
         `

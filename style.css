@@ -12,20 +12,57 @@ body{
 header{
     background-color: #051b34;
     color: white;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
     font-family: 'Righteous', cursive;
     font-size: 1.8rem;
-    
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+
 }
+
 header b{
     color: #DA1212;
+}
+header div{
+  
+}
+header div a{
+  top: 30px;
+  left: 100px;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  background-color: #DA1212;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .title{
    text-align: center;
     color: white;
-   font-size: 1.7vh;
-   padding: 50px;
+   font-size: 1.3rem;
+   margin: 40px;
+}
+.title p{
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+.title strong{
+  color: #DA1212;
+}
+
+.title p .clique{
+  display: none;
+}
+@media screen and (max-width:1280px) {
+  .title p .clique{
+    display: initial;
+  }
+  .title .mouse{
+   display: none;
+  }
 }
 
 .destaquesSemana{
@@ -69,7 +106,7 @@ header b{
     width: 335px;
     height: 100%;
     color: #2e2d31;
-    background: #131313;
+   
     overflow: hidden;
     border-radius: 20px;
   }
@@ -104,9 +141,11 @@ header b{
     bottom: 0;
       /* edit the width to fit card */
     width: 100%;
+    height: 55%;
+    overflow-y: scroll;
     padding: 15px;
     background: #f2f2f2;
-  
+    visibility: hidden;
     border-top-right-radius: 10px;
       /* edit here to change the height of the content box */
     transform: translateY(100%);
@@ -147,6 +186,7 @@ header b{
   
   .card:hover .card_content {
     transform: translateY(0);
+    visibility: visible;
   }
   
   .card:hover .card_description {

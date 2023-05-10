@@ -1,4 +1,4 @@
-const url = `https://api.themoviedb.org/3/trending/all/week?api_key=8e27761e61ffeef6c32b397bf03f8b8d`
+const url = `https://api.themoviedb.org/3/trending/all/week?api_key=8e27761e61ffeef6c32b397bf03f8b8d&language=pt-br`
 
 async function fetchMovies(){
     const response = await fetch(url)
