@@ -19,6 +19,7 @@ header{
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 80px;
    
 
 }
@@ -26,19 +27,7 @@ header{
 header b{
     color: #DA1212;
 }
-header div{
-  
-}
-header div a{
-  top: 30px;
-  left: 100px;
-  position: absolute;
-  text-decoration: none;
-  color: white;
-  background-color: #DA1212;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
+
 .title{
    text-align: center;
     color: white;
