@@ -41,7 +41,7 @@ loadMovies = async (res) =>{
             <span class="card_title">${nameMovie}</span>
                 <span class="card_subtitle">Overview <strong>${nota} <img src="icon/star.png"></strong></span>
                 <p class="card_description">${movie.overview}</p>
-                <a class="link" target="blank" rel="external" href=https://youtube.com/results?search_query=${nameMovie} >
+                <a class="trailer" target="blank" rel="external" href=https://youtube.com/results?search_query=${nameMovie} >
                         Trailer
                     </a>
             </div>
